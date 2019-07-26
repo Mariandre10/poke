@@ -1,9 +1,8 @@
 *.pyc
 *~
 __pycache__
-myvenv
+mari
 db.sqlite3
-/static
 .DS_Store
 # Created by https://www.gitignore.io/api/visualstudiocode
 # Edit at https://www.gitignore.io/?templates=visualstudiocode
@@ -20,3 +19,5 @@ db.sqlite3
 .history
 
 # End of https://www.gitignore.io/api/visualstudiocode
+
+*.vscode/
