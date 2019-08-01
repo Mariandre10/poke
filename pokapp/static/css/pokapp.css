@@ -1,0 +1,40 @@
+h1 {
+    color: gray;
+}
+
+.photo {
+    width: 30%;
+    height: 30%;
+}
+
+.button{
+    text-align: right;
+}
+
+.botones{
+    width: 250px;
+}
+
+.celda{
+    width: 170px;
+}
+
+.texto{
+    text-align: justify;
+}
+
+.modal-body{
+    text-align: justify;
+}
+
+.ima-modal{
+    text-align: center;
+}
+
+.modal-title{
+    text-align: center;  
+}
+
+.nom{
+    font-weight: bold;
+}
