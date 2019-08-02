@@ -1,10 +1,10 @@
 {% extends 'pokapp/base.html' %}
 {% block content %}
 <div class="button mb-3">
-  <a class="btn btn-dark" href="{% url 'crear_pokemon' %}">Nuevo Pokemon</a>
+  <a class="btn btn-dark btn-sm" href="{% url 'crear_pokemon' %}">Nuevo Pokemon</a>
 </div>
 <table class="table table-bordered">
-  <thead>
+  <thead class="thead-dark">
     <tr class="files">
       <th scope="col">Nombre</th>
       <th scope="col">Especie</th>
@@ -17,16 +17,22 @@
   <tbody>
     {% for pokemon in pokemon_list %}
     <tr>
-      <td class="d-align-items-center">{{pokemon.name}}</td>
-      <td>{{pokemon.specie}}</td>
+      <td class="font-weight-light">{{pokemon.name}}</td>
+      <td class="font-weight-light">{{pokemon.specie}}</td>
       <!--<td class="tipo">{{pokemon.tipo}}</td>
       <td class="texto">{{pokemon.description}}</td>-->
       <td class="celda" ><img src="{{pokemon.photo}}" alt="{{pokemon.name}}" class="photo"/></td>
       <td class="botones">
-        <a href="{% url 'editar_pokemon' pk=pokemon.pk %}" class="btn btn-success mr-3 "><i class="far fa-edit"></i></a >
-        <a href="#" class="btn btn-danger mr-3 " data-name="{{pokemon.id}}" id="enlac" data-toggle="modal" data-target="#exampleModal{{pokemon.id}}"><i class="far fa-trash-alt"></i></i></a >
-        <a href="#" class="btn btn-primary" data-name="{{pokemon.id}}" id="detail" data-toggle="modal" data-target="#detailModal{{pokemon.id}}"><i class="far fa-eye"></i></i></a >
-          </td>
+        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Actualizar">
+          <a href="{% url 'editar_pokemon' pk=pokemon.pk %}" class="btn btn-success mr-3 btn-sm"><i class="far fa-edit"></i></a >
+        </span>
+        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Eliminar">
+          <a href="#" class="btn btn-danger mr-3 btn-sm" data-name="{{pokemon.id}}" id="enlac" data-toggle="modal" data-target="#exampleModal{{pokemon.id}}"><i class="far fa-trash-alt"></i></i></a >
+        </span>
+        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Detallar">
+            <a href="#" class="btn btn-primary btn-sm" data-name="{{pokemon.id}}" id="detail" data-toggle="modal" data-target="#detailModal{{pokemon.id}}"><i class="far fa-eye"></i></i></a >
+        </span>
+            </td>
     </tr>
     <!-- Modal Eliminar-->
 <div class="modal fade" id="exampleModal{{pokemon.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
