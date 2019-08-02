@@ -4,7 +4,7 @@ from django.utils import timezone
 class Pokemon(models.Model):
     name = models.CharField(max_length=24)
     specie = models.CharField(max_length=50)
-    description = models.CharField(max_length=300, null=True, blank=True)
+    description = models.CharField(max_length=600, null=True, blank=True)
     tipo = models.CharField(max_length=50, null=True, blank=True)
     photo = models.CharField(max_length=150)
 

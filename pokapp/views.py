@@ -10,6 +10,7 @@ from django.http import HttpResponse
 class PokemonList(ListView):
     template_name = "pokapp/lista_pokemon.html"
     model = Pokemon
+    paginate_by = 5
 
 class PokemonCreate(CreateView):
     template_name = "pokapp/crear_pokemon.html"

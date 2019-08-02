@@ -100,4 +100,35 @@
   {% endfor %}
   </tbody>
 </table>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-end">
+    <li class="page-item disabled">
+    {% if page_obj.has_previous %}
+    <a href="?page={{page_obj.previous_page_number}}"> <i class="fas fa-angle-double-left"></i> <span class='nom' >Previous</span></a>
+    {% endif %}
+    </li>
+    <li class="page-item">
+    {% if page_obj.has_next %}
+    <a  href="?page={{page_obj.next_page_number}}"><span class='nom' >Next</span>&nbsp;<i class="fas fa-angle-double-right"></i></a>
+    {% endif %}
+    </li>
+  </ul>           
+</nav>
+
+<!--<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-end">
+      <li class="page-item disabled">
+        {% if page_obj.has_previous %}
+        <a class="page-link" href="?page={{page_obj.previous_page_number}}">Previous</a>
+        {% endif %}
+      </li>
+  
+      <li class="page-item">
+        {% if page_obj.has_next %}
+        <a class="page-link" href="?page={{page_obj.next_page_number}}">Next</a>
+        {% endif %}
+      </li>
+    </ul>
+  </nav>-->
 {% endblock %}
